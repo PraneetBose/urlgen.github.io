@@ -1,1 +1,224 @@
 # Praneet.github.io
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device=width, initial-scale=1.0" />
+    <title>QR_CODE_GENERATOR</title>
+    <link rel="stylesheet" href="QR.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="video-bg">
+    <video width="320" height="240" autoplay loop muted>
+        <source
+                src="https://assets.codepen.io/3364143/7btrrd.mp4"
+                type="video/mp4"
+        />
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="dark-light">
+    <svg
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+    >
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+    </svg>
+</div>
+<div class="app">
+    <div class="header">
+        <div class="menu-circle"></div>
+    </div>
+    <div class="wrapper">
+        <div class="left-side">
+            <div class="side-wrapper">
+                <div class="side-title">Apps</div>
+                <div class="side-menu">
+                    <a href="#">
+                        <svg viewBox="0 0 512 512">
+                            <g xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                <path
+                                        d="M0 0h128v128H0zm0 0M192 0h128v128H192zm0 0M384 0h128v128H384zm0 0M0 192h128v128H0zm0 0"
+                                        data-original="#bfc9d1"
+                                />
+                            </g>
+                            <path
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    d="M192 192h128v128H192zm0 0"
+                                    fill="currentColor"
+                                    data-original="#82b1ff"
+                            />
+                            <path
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    d="M384 192h128v128H384zm0 0M0 384h128v128H0zm0 0M192 384h128v128H192zm0 0M384 384h128v128H384zm0 0"
+                                    fill="currentColor"
+                                    data-original="#bfc9d1"
+                            />
+                        </svg>
+                        QR Generator
+                    </a>
+                    <a href="url.html">
+                        <svg viewBox="0 0 512 512" fill="currentColor">
+                            <path
+                                    d="M448.773 235.551A135.893 135.893 0 00451 211c0-74.443-60.557-135-135-135-47.52 0-91.567 25.313-115.766 65.537-32.666-10.59-66.182-6.049-93.794 12.979-27.612 19.013-44.092 49.116-45.425 82.031C24.716 253.788 0 290.497 0 331c0 7.031 1.703 13.887 3.006 20.537l.015.015C12.719 400.492 56.034 436 106 436h300c57.891 0 106-47.109 106-105 0-40.942-25.053-77.798-63.227-95.449z"
+                            />
+                        </svg>
+                        Url Shortener
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="content-wrapper">
+                <div class="content-wrapper-header">
+                    <div class="content-wrapper-context">
+                        <h3 class="img-content font-bold">QRGEN</h3>
+                        <div class="content-text">
+                            Convert your any text or link in QR Code with our QR GEN.
+                        </div>
+                        <button class="content-button">Start Today</button>
+                    </div>
+                    <img
+                            class="content-wrapper-img"
+                            src="https://assets.codepen.io/3364143/glass.png"
+                            alt=""
+                    />
+                </div>
+                <div class="flex w-full h-full">
+                    <div class="p-4 my-3 h-full w-1/2 app-card">
+                        <div class="sm:max-w-lg w-full p-10 bg-white rounded-xl z-10">
+                            <div class="text-center">
+                                <h2 class="mt-5 text-3xl font-bold text-gray-900">
+                                    QR Generator
+                                </h2>
+                                <p class="mt-2 text-sm text-gray-400">
+                                    Generate your QR Code with our QR Generator
+                                </p>
+                            </div>
+                            <div class="mt-8 space-y-3">
+                                <div class="grid grid-cols-1 space-y-2">
+                                    <label
+                                            class="text-sm font-bold text-gray-500 tracking-wide"
+                                    >Text OR Url</label
+                                    >
+                                    <input
+                                            class="text-gray-800 p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
+                                            type="text"
+                                            placeholder="www.google.com"
+                                            id="qrText"
+                                            onkeydown="generateQR()"
+                                    />
+                                </div>
+
+                                <button
+                                        type="submit"
+                                        onclick="generateQR()"
+                                        class="my-5 w-full flex justify-center bg-blue-500 text-gray-100 p-4 rounded-full tracking-wide font-semibold focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300"
+                                >
+                                    Generate QR Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 my-3 h-full w-1/2 app-card flex justify-center gap-4">
+                        <div class="flex items-center w-full flex-col gap-4">
+                            <h3 class="img-content font-bold">QR Code</h3>
+                            <img
+                                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=QR+Code+Generator"
+                                    alt=""
+                                    width="150"
+                                    height="150"
+                                    class="object-contain shadow-md bg-white mt-4"
+                                    id="qrImage"
+                            />
+                            <h2 class="text-2xl text-white" id="qrText2"></h2>
+                        </div>
+
+                        <div class="flex w-full gap-2">
+                            <button
+                                    id="pngdownload"
+                                    class="flex items-center justify-center w-1/2 h-12 bg-sky-500 text-white font-bold rounded-l-lg"
+                            >
+                                DOWNLOAD
+                            </button>
+                            <button
+                                    id="sharebutton"
+                                    class="flex items-center justify-center w-1/2 h-12 bg-yellow-500 text-white font-bold rounded-r-lg"
+                            >
+                                SHARE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-app"></div>
+</div>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+></script>
+<script src="qr.js"></script>
+<script src=
+                "https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js">
+</script>
+<script>
+    let imgBox = document.getElementById("imgBox");
+    let qrImage = document.getElementById("qrImage");
+    let qrText = document.getElementById("qrText");
+    let sharebutton = document.getElementById("sharebutton");
+    let pngdownload = document.getElementById("pngdownload");
+    let qrText2 = document.getElementById("qrText2");
+
+    function generateQR() {
+        if (qrText.value.length > 0) {
+            qrImage.src =
+                "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+                qrText.value;
+            qrText2.innerHTML = qrText.value;
+        } else {
+            qrText.classList.add("error");
+            setTimeout(() => {
+                qrText.classList.remove("error");
+            }, 1000);
+        }
+    }
+
+    pngdownload.onclick = function () {
+        axios
+        ({
+            url: qrImage.src,
+            method: "GET",
+            responseType: "blob",
+        })
+            .then((response) => {
+                const url = window.URL.createObjectURL(new Blob([response.data]));
+                const link = document.createElement("a");
+                link.href = url;
+                link.setAttribute("download", "QR Code.png");
+                document.body.appendChild(link);
+                link.click();
+            });
+    };
+    sharebutton.onclick = function () {
+        if(navigator.share){
+            navigator.share({
+                title: 'QR Code',
+                text: 'QR Code',
+                url: qrImage.src,
+            })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+        }
+    };
+</script>
+</body>
+</html>
