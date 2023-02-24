@@ -1,5 +1,14 @@
 # Praneet.github.io
 
+![image](https://user-images.githubusercontent.com/94593299/221197116-d6608590-913c-4538-bb49-d9f43c65a119.png)
+QR GENERATOR
+
+![image](https://user-images.githubusercontent.com/94593299/221197166-36f5ab6a-badc-4845-810c-aec3ccb84b48.png)
+URL SHORTNER
+
+
+this has both Light mode(BETA) and dark mode
+
 <!DOCTYPE html>
 <html>
 <head>
